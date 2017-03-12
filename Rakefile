@@ -1,14 +1,14 @@
-require 'rake/testtask'
+# require 'rake/testtask'
 # require 'find'
 require "bundler/gem_tasks"
 
-desc 'Display inventory of all files'
-task :inventory do
-  Find.find('.') do |name|
-    next if name.include?('/.') # Excludes files and directories with . names
-    puts name if File.file?(name)
-  end
-end
+# desc 'Display inventory of all files'
+# task :inventory do
+#   Find.find('.') do |name|
+#     next if name.include?('/.') # Excludes files and directories with . names
+#     puts name if File.file?(name)
+#   end
+# end
 
 desc 'Say hello'
 task :hello do
@@ -18,7 +18,7 @@ end
 
 desc 'Run tests'
 task :tests do
-  sh 'ruby ~/launch-school/todolist_project/test/todolist_project_test.rb'
+  sh 'ruby ./test/todolist_project_test.rb'
 end
 
 desc 'default'
